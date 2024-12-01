@@ -31,7 +31,7 @@ const FloatingDockMobile = ({ items, className }) => {
   return (
     <motion.div
       className={cn(
-        "fixed bottom-4 right-4 block md:hidden z-[9999]",
+        "fixed bottom-4 right-4 block md:hidden shadow-md shadow-slate-900/75 z-[9999]",
         className
       )}
       initial={{ opacity: 0, y: 20 }}
@@ -91,7 +91,7 @@ const FloatingDockDesktop = ({ items, className }) => {
       onMouseMove={(e) => mouseX.set(e.pageX)}
       onMouseLeave={() => mouseX.set(Infinity)}
       className={cn(
-        "fixed bottom-6 left-1/2 mx-auto hidden md:flex h-16 gap-4 items-end rounded-2xl bg-gray-50 dark:bg-[#1E293B] px-4 pb-3 z-[9999]",
+        "fixed bottom-6 left-1/2 mx-auto hidden md:flex h-16 gap-4 items-end rounded-2xl bg-gray-50 dark:bg-[#1E293B] px-4 pb-3 shadow-md shadow-slate-900/75 w z-[9999]",
         className
       )}
       initial={{ opacity: 0, y: 20, x: -115 }}

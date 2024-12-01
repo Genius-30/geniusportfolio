@@ -15,8 +15,8 @@ import { useRef, useState } from "react";
 import { FloatingDock } from "@/components/ui/floating-dock";
 import { HeroParallax } from "@/components/ui/hero-parallax";
 import { HoverEffect } from "@/components/ui/card-hover-effect";
+import { ProjectsSection } from "@/components/projectsSection";
 import { StarsBackground } from "@/components/ui/stars-background";
-import WhatWeDidSection from "@/components/WhatWeDidSection";
 import { WhatWeDoSection } from "@/components/WhatWeDoSection";
 
 export default function Home() {
@@ -78,12 +78,12 @@ export default function Home() {
     <div className="relative">
       <FloatingDock items={links} />
       {/* Hero Section */}
-      <section className="md:h-[280vh] overflow-hidden">
+      <section className="md:h-[290vh] overflow-hidden">
         <HeroParallax products={products} />
       </section>
 
       {/* Services Section */}
-      <section className="h-[70vh] md:h-screen overflow-hidden">
+      <section className="h-[70vh] md:h-screen overflow-hidden bg-slate-900">
         <WhatWeDoSection />
       </section>
       <section className="relative md:h-screen flex items-center justify-center">
@@ -92,22 +92,23 @@ export default function Home() {
       </section>
 
       {/* Projects/Skills Section */}
-      <section className="h-[50vh] md:h-screen">
-        <WhatWeDidSection text="What We Did?" />
+      <section className="relative h-full bg-slate-900">
+        <ProjectsSection />
+        <StarsBackground />
       </section>
       <section></section>
 
       {/* Audio Player with Mute/Unmute Toggle */}
       <audio ref={audioRef} loop muted={isMuted}>
         <source
-          src="https://res.cloudinary.com/dgzee4v9w/video/upload/v1732726535/for-technology-268972_1_c8cguu.mp3"
+          src="https://res.cloudinary.com/dgzee4v9w/video/upload/v1733043211/gram-gunna-trap-type-beat-264952_hkji14.mp3"
           type="audio/mp3"
         />
         Your browser does not support the audio element.
       </audio>
 
       {/* Play/Pause and Mute/Unmute Toggle Button */}
-      <div className="fixed top-4 right-4 w-20 md:w-24 flex items-center justify-evenly bg-gray-800 text-white rounded-full p-2 z-[99999]">
+      <div className="fixed top-4 right-4 w-20 md:w-24 flex items-center justify-evenly bg-gray-800 text-white rounded-full p-2 shadow-md shadow-slate-900/75 z-[99999]">
         <button onClick={togglePlayPause}>
           {isPlaying ? <IconPlayerPause /> : <IconPlayerPlay />}
         </button>

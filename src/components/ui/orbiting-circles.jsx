@@ -1,3 +1,5 @@
+"use client";
+
 import { cn } from "@/lib/utils";
 
 export default function OrbitingCircles({
@@ -9,6 +11,9 @@ export default function OrbitingCircles({
   radius = 50,
   path = true,
 }) {
+  // Clamp the radius to fit within the screen size dynamically
+  const clampedRadius = Math.min(radius, window.innerWidth / 2 - 20);
+
   return (
     <>
       {path && (
@@ -21,7 +26,7 @@ export default function OrbitingCircles({
             className="stroke-black/10 stroke-1 dark:stroke-white/10"
             cx="50%"
             cy="50%"
-            r={radius}
+            r={clampedRadius}
             fill="none"
           />
         </svg>
@@ -29,7 +34,7 @@ export default function OrbitingCircles({
       <div
         style={{
           "--duration": duration,
-          "--radius": radius,
+          "--radius": clampedRadius,
           "--delay": -delay,
         }}
         className={cn(

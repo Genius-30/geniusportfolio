@@ -50,7 +50,12 @@ module.exports = {
   			card: {
   				DEFAULT: 'hsl(var(--card))',
   				foreground: 'hsl(var(--card-foreground))'
-  			}
+  			},
+  			'color-1': 'hsl(var(--color-1))',
+  			'color-2': 'hsl(var(--color-2))',
+  			'color-3': 'hsl(var(--color-3))',
+  			'color-4': 'hsl(var(--color-4))',
+  			'color-5': 'hsl(var(--color-5))'
   		},
   		borderRadius: {
   			lg: 'var(--radius)',
@@ -109,6 +114,19 @@ module.exports = {
   				'100%': {
   					transform: 'rotate(360deg) translateY(calc(var(--radius) * 1px)) rotate(-360deg)'
   				}
+  			},
+  			'border-beam': {
+  				'100%': {
+  					'offset-distance': '100%'
+  				}
+  			},
+  			rainbow: {
+  				'0%': {
+  					'background-position': '0%'
+  				},
+  				'100%': {
+  					'background-position': '200%'
+  				}
   			}
   		},
   		animation: {
@@ -117,7 +135,9 @@ module.exports = {
   			rippling: 'rippling var(--duration) ease-out',
   			'shimmer-slide': 'shimmer-slide var(--speed) ease-in-out infinite alternate',
   			'spin-around': 'spin-around calc(var(--speed) * 2) infinite linear',
-  			orbit: 'orbit calc(var(--duration)*1s) linear infinite'
+  			orbit: 'orbit calc(var(--duration)*1s) linear infinite',
+  			'border-beam': 'border-beam calc(var(--duration)*1s) infinite linear',
+  			rainbow: 'rainbow var(--speed, 2s) infinite linear'
   		}
   	}
   },

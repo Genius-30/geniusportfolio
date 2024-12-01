@@ -1,7 +1,9 @@
 "use client";
 
+import { IconArrowRight, IconPhoneCall } from "@tabler/icons-react";
 import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 
+import BlurIn from "./blur-in";
 import { FadeText } from "./fade-text";
 import { FlipWords } from "./flip-words";
 import Image from "next/image";
@@ -98,31 +100,24 @@ export const Header = () => {
   const words = ["Web Developer", "MERN Developer", "Software Developer"];
   return (
     <div className="max-w-[95%] md:max-w-7xl relative mx-auto md:ml-16 mr-auto my-28 md:my-40 px-4 left-0 top-0 z-[999]">
-      <h1 className="mb-[-6px] md:mb-1">
-        <FadeText
-          className="text-[32px] md:text-6xl font-bold text-black dark:text-white"
-          direction="left"
-          framerProps={{
-            show: { transition: { delay: 0.4 } },
-          }}
-          text="Genius Porwal"
-        />
-      </h1>
-      <FlipWords
-        className="text-lg md:text-3xl font-medium md:font-semibold"
-        words={words}
+      <BlurIn
+        word="Genius Porwal"
+        className="bg-clip-text bg-gradient-to-r from-[#ffaa40] to-[#9c40ff] text-transparent text-[32px] md:text-6xl font-bold mb-[-4px] md:mb-[-8px] ml-[-2px]"
       />
-      <div className="md:max-w-2xl mt-6">
-        <FadeText
-          className="text-base md:text-xl dark:text-neutral-200"
-          direction="left"
-          framerProps={{
-            show: { transition: { delay: 0.4 } },
-          }}
-          text="Building seamless and modern web applications with the latest
+      <BlurIn
+        word={
+          <FlipWords
+            className="text-lg md:text-3xl font-medium md:font-semibold"
+            words={words}
+          />
+        }
+        className="inline-block mt-[-28px]"
+      />
+      <BlurIn
+        word="Building seamless and modern web applications with the latest
         technologies. Let’s create something amazing!"
-        />
-      </div>
+        className="text-base md:text-xl dark:text-neutral-200 md:max-w-2xl mt-6 text-justify sm:text-start"
+      />
       <FadeText
         direction="left"
         framerProps={{
@@ -130,8 +125,9 @@ export const Header = () => {
         }}
         text={
           <ShimmerButton className="shadow-2xl mt-6" background="#0F172A">
-            <span className="whitespace-pre-wrap text-center text-sm font-medium leading-none tracking-tight text-white dark:from-white dark:to-slate-900/10 lg:text-lg">
-              Contact Me
+            <span className="whitespace-pre-wrap text-center text-sm font-medium leading-none tracking-tight text-white dark:from-white dark:to-slate-900/10 lg:text-lg flex items-center">
+              Contact Me{" "}
+              <IconArrowRight className="h-5 w-auto md:h-6 ml-1 md:m-0" />
             </span>
           </ShimmerButton>
         }

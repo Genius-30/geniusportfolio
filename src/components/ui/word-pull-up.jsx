@@ -17,8 +17,8 @@ export default function WordPullUp({
   },
 
   framerProps = {
-    hidden: { y: 20, opacity: 0 },
-    show: { y: 0, opacity: 1 },
+    hidden: { y: 20, opacity: 0, rotate: -10 },
+    show: { y: 0, opacity: 1, rotate: 0 },
   },
 
   className,
@@ -39,7 +39,17 @@ export default function WordPullUp({
           variants={framerProps}
           style={{ display: "inline-block", paddingRight: "8px" }}
         >
-          {word === "" ? <span>&nbsp;</span> : word}
+          <span
+            className="bg-clip-text text-transparent"
+            style={{
+              background:
+                "linear-gradient(to bottom, #fff, #000)",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+            }}
+          >
+            {word === "" ? <span>&nbsp;</span> : word}
+          </span>
         </motion.span>
       ))}
     </motion.h1>
