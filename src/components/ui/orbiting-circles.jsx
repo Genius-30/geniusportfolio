@@ -1,5 +1,7 @@
 "use client";
 
+import { useEffect, useState } from "react";
+
 import { cn } from "@/lib/utils";
 
 export default function OrbitingCircles({
@@ -11,8 +13,12 @@ export default function OrbitingCircles({
   radius = 50,
   path = true,
 }) {
-  // Clamp the radius to fit within the screen size dynamically
-  const clampedRadius = Math.min(radius, window.innerWidth / 2 - 20);
+  const [clampedRadius, setClampedRadius] = useState(radius);
+
+  useEffect(() => {
+    // Only run on the client-side where `window` is available
+    setClampedRadius(Math.min(radius, window.innerWidth / 2 - 20));
+  }, [radius]);
 
   return (
     <>
