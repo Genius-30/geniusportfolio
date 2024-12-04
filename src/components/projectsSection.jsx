@@ -11,231 +11,73 @@ export function ProjectsSection() {
   const data = [
     {
       title: "Netflix Clone",
-      content: (
-        <div>
-          <p className="text-blue-800 dark:text-blue-200 text-xs md:text-sm font-normal mb-8">
-            Built using HTML and CSS, this project focused on creating a
-            responsive landing page, learning the use of semantic tags and
-            various CSS properties.
-          </p>
-          <div className="grid grid-cols-2 gap-4">
-            <Image
-              src="https://res.cloudinary.com/dgzee4v9w/image/upload/v1731843540/Screenshot_2024-11-11_213026_ddahd8.png"
-              alt="Netflix landing page clone"
-              width={500}
-              height={500}
-              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-            />
-          </div>
-          <div className="flex flex-wrap gap-4 mt-4">
-            <Link
-              href="https://github.com/Genius-30/netflix-ui-clone"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center"
-            >
-              <RainbowButton>
-                <IconBrandGithub className="mr-2" /> GitHub
-              </RainbowButton>
-            </Link>
-            <Link
-              href="https://your-live-demo-link"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center"
-            >
-              <RainbowButton>
-                <IconLink className="mr-2" /> Live Demo
-              </RainbowButton>
-            </Link>
-          </div>
-        </div>
-      ),
+      description: [
+        "Responsive landing page built with HTML and CSS.",
+        "Focused on semantic tags and CSS properties.",
+        "Improved understanding of flexbox and grid layouts.",
+      ],
+      image:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNmquSprvWMl9rWJi-7pTdXSbIiPB44egZnA&s",
+      github: "https://github.com/Genius-30/netflix-ui-clone",
+      bgColor: "text-blue-800 dark:text-blue-200",
     },
     {
       title: "E-commerce Website",
-      content: (
-        <div>
-          <p className="text-green-800 dark:text-green-200 text-xs md:text-sm font-normal mb-8">
-            Built with HTML, CSS, and JavaScript, featuring an add-to-cart
-            functionality and Web3Forms integration for order emails.
-          </p>
-          <div className="grid grid-cols-2 gap-4">
-            <Image
-              src="https://res.cloudinary.com/dgzee4v9w/image/upload/v1731845540/Screenshot_2024-11-17_172728_t0xig3.png"
-              alt="E-commerce website"
-              width={500}
-              height={500}
-              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-            />
-          </div>
-          <div className="flex flex-wrap gap-4 mt-4">
-            <Link
-              href="https://github.com/Genius-30/ecommerce"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center"
-            >
-              <RainbowButton>
-                <IconBrandGithub className="mr-2" /> GitHub
-              </RainbowButton>
-            </Link>
-            <RainbowButton>
-              <Link
-                href="https://genius-ecommerce.vercel.app"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center"
-              >
-                <IconLink className="mr-2" /> Live Demo
-              </Link>
-            </RainbowButton>
-          </div>
-        </div>
-      ),
+      description: [
+        "Created with HTML, CSS, and JavaScript.",
+        "Includes add-to-cart functionality.",
+        "Integrated Web3Forms for order submission emails.",
+      ],
+      image:
+        "https://res.cloudinary.com/dgzee4v9w/image/upload/v1731845540/Screenshot_2024-11-17_172728_t0xig3.png",
+      github: "https://github.com/Genius-30/ecommerce",
+      demo: "https://genius-ecommerce.vercel.app",
+      bgColor: "text-green-800 dark:text-green-200",
     },
     {
       title: "Notes Web App",
-      content: (
-        <div>
-          <p className="text-yellow-800 dark:text-yellow-200 text-xs md:text-sm font-normal mb-8">
-            Built with React and Appwrite, featuring CRUD operations, React
-            routing, and conditional rendering.
-          </p>
-          <div className="grid grid-cols-2 gap-4">
-            <Image
-              src="https://res.cloudinary.com/dgzee4v9w/image/upload/v1731845757/Screenshot_2024-06-20_105743_rd5ybw.png"
-              alt="Notes web app"
-              width={500}
-              height={500}
-              className="border border-slate-600 rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-            />
-          </div>
-          <div className="flex flex-wrap gap-4 mt-4">
-            <Link
-              href="https://github.com/Genius-30/notes-web-app-react"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center"
-            >
-              <RainbowButton>
-                <IconBrandGithub className="mr-2" /> GitHub
-              </RainbowButton>
-            </Link>
-            <Link
-              href="https://genius-notes.vercel.app"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center"
-            >
-              <RainbowButton>
-                <IconLink className="mr-2" /> Live Demo
-              </RainbowButton>
-            </Link>
-          </div>
-        </div>
-      ),
+      description: [
+        "Developed using React and Appwrite.",
+        "Implemented CRUD operations and routing.",
+        "Features conditional rendering and a user-friendly interface.",
+      ],
+      image:
+        "https://res.cloudinary.com/dgzee4v9w/image/upload/v1731845757/Screenshot_2024-06-20_105743_rd5ybw.png",
+      github: "https://github.com/Genius-30/notes-web-app-react",
+      demo: "https://genius-notes.vercel.app",
+      bgColor: "text-yellow-800 dark:text-yellow-200",
     },
     {
       title: "YouTube Backend",
-      content: (
-        <div>
-          <p className="text-purple-800 dark:text-purple-200 text-xs md:text-sm font-normal mb-8">
-            Built using Node.js, Express.js, and MongoDB, this backend includes
-            APIs for video upload, professional sign-up, OTP email verification,
-            and token-based account security.
-          </p>
-          <div className="flex flex-wrap gap-4 mt-4">
-            <Link
-              href="https://github.com/Genius-30/custom-youtube-backend"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <RainbowButton>
-                <IconBrandGithub className="mr-2" /> GitHub
-              </RainbowButton>
-            </Link>
-          </div>
-        </div>
-      ),
+      description: [
+        "Built using Node.js, Express.js, and MongoDB.",
+        "Includes APIs for video upload and professional sign-up.",
+        "Features OTP email verification and token-based security.",
+      ],
+      github: "https://github.com/Genius-30/custom-youtube-backend",
+      bgColor: "text-purple-800 dark:text-purple-200",
     },
     {
-      title: "Ratify - Ongoing",
-      content: (
-        <div>
-          <p className="text-yellow-800 dark:text-yellow-200 text-xs md:text-sm font-normal mb-8">
-            Building a platform for users to give ratings and reviews to
-            businesses or products. Currently, the backend is completed, and the
-            frontend is yet to be developed.
-          </p>
-          <div className="mb-8">
-            <p className="text-yellow-800 dark:text-yellow-200 text-xs md:text-sm font-normal mb-4">
-              Technologies used:
-            </p>
-            <div className="flex gap-2 items-center text-yellow-700 dark:text-yellow-300 text-xs md:text-sm">
-              ✅ TypeScript
-            </div>
-            <div className="flex gap-2 items-center text-yellow-700 dark:text-yellow-300 text-xs md:text-sm">
-              ✅ Next.js
-            </div>
-          </div>
-          <div className="flex flex-wrap gap-4 mt-4">
-            <Link
-              href="https://github.com/Genius-30/Ratify"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center"
-            >
-              <RainbowButton>
-                <IconBrandGithub className="mr-2" /> GitHub
-              </RainbowButton>
-            </Link>
-          </div>
-        </div>
-      ),
+      title: "Ratify",
+      description: [
+        "Building a platform for user ratings and reviews.",
+        "Backend completed; frontend under development.",
+      ],
+      technologies: ["TypeScript", "Next.js"],
+      github: "https://github.com/Genius-30/Ratify",
+      bgColor: "text-yellow-800 dark:text-yellow-200",
     },
     {
       title: "Real-time Chat App",
-      content: (
-        <div>
-          <p className="text-indigo-800 dark:text-indigo-200 text-xs md:text-sm font-normal mb-8">
-            Built with the MERN stack and Socket.IO, incorporating real-time
-            messaging features. The app also uses the ShadCN library for
-            prebuilt components.
-          </p>
-          <div className="grid grid-cols-2 gap-4">
-            <Image
-              src="https://res.cloudinary.com/dgzee4v9w/image/upload/v1731843540/Screenshot_2024-11-11_213026_ddahd8.png"
-              alt="Real-time chat app"
-              width={500}
-              height={500}
-              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-            />
-          </div>
-          <div className="flex flex-wrap gap-4 mt-4">
-            <Link
-              href="https://github.com/Genius-30/chat-app"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center"
-            >
-              <RainbowButton>
-                <IconBrandGithub className="mr-2" /> GitHub
-              </RainbowButton>
-            </Link>
-            <Link
-              href="https://chat-app-genius.vercel.app"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center"
-            >
-              <RainbowButton>
-                <IconLink className="mr-2" /> Live Demo
-              </RainbowButton>
-            </Link>
-          </div>
-        </div>
-      ),
+      description: [
+        "Built with the MERN stack and Socket.IO.",
+        "Real-time messaging and ShadCN for prebuilt components.",
+      ],
+      image:
+        "https://res.cloudinary.com/dgzee4v9w/image/upload/v1731843540/Screenshot_2024-11-11_213026_ddahd8.png",
+      github: "https://github.com/Genius-30/chat-app",
+      demo: "https://chat-app-genius.vercel.app",
+      bgColor: "text-indigo-800 dark:text-indigo-200",
     },
   ];
 
@@ -246,7 +88,63 @@ export function ProjectsSection() {
           text="Recent Projects"
           className={"text-2xl md:text-6xl text-center mb-10"}
         />
-        <Timeline data={data} />
+        <Timeline
+          data={data.map((project) => ({
+            title: project.title,
+            content: (
+              <div>
+                <ul
+                  className={`${project.bgColor} text-xs md:text-sm font-normal mb-8 list-disc pl-6`}
+                >
+                  {project.description.map((point, index) => (
+                    <li key={index}>{point}</li>
+                  ))}
+                </ul>
+                {project.image && (
+                  <div className="grid">
+                    <Image
+                      src={project.image}
+                      alt={project.title}
+                      width={500}
+                      height={500}
+                      className="rounded-lg border-2 border-gray-200 dark:border-gray-600 object-cover h-28 sm:h-40 md:h-44 lg:h-60 w-[70%] sm:w-[55%] shadow-md"
+                    />
+                  </div>
+                )}
+                <div className="flex items-center flex-wrap gap-4 mt-4">
+                  {project.github && (
+                    <Link
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <RainbowButton className="h-10 md:h-12 w-12 md:w-40 text-sm sm:text-lg py-2 px-3 flex items-center justify-center">
+                        <IconBrandGithub className="h-5 md:h-8" />
+                        <span className="hidden md:inline-block ml-2">
+                          GitHub
+                        </span>
+                      </RainbowButton>
+                    </Link>
+                  )}
+                  {project.demo && (
+                    <Link
+                      href={project.demo}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <RainbowButton className="h-10 md:h-12 w-12 md:w-40 text-sm sm:text-lg py-2 px-3 flex items-center justify-center">
+                        <IconLink className="h-5 md:h-8" />
+                        <span className="hidden md:inline-block ml-2">
+                          Live Demo
+                        </span>
+                      </RainbowButton>
+                    </Link>
+                  )}
+                </div>
+              </div>
+            ),
+          }))}
+        />
       </div>
     </section>
   );

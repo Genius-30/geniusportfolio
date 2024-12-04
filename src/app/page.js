@@ -86,8 +86,8 @@ export default function Home() {
       <section className="h-[70vh] md:h-screen overflow-hidden bg-slate-900">
         <WhatWeDoSection />
       </section>
-      <section className="relative md:h-screen flex items-center justify-center">
-        <HoverEffect className="w-[80%]" items={projects} />
+      <section className="relative flex items-center justify-center">
+        <HoverEffect className="w-[80%] h-full" items={projects} />
         <StarsBackground />
       </section>
 

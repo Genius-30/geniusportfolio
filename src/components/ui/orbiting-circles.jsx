@@ -16,8 +16,22 @@ export default function OrbitingCircles({
   const [clampedRadius, setClampedRadius] = useState(radius);
 
   useEffect(() => {
-    // Only run on the client-side where `window` is available
-    setClampedRadius(Math.min(radius, window.innerWidth / 2 - 20));
+    // Function to update the radius dynamically
+    const updateRadius = () => {
+      const maxRadius = Math.min(radius, window.innerWidth / 2 - 20);
+      const adjustedRadius =
+        window.innerWidth < 768 ? maxRadius * 0.85 : maxRadius; // Reduce radius by 40% for small screens
+      setClampedRadius(adjustedRadius);
+    };
+
+    updateRadius(); // Initialize on component mount
+
+    // Add event listener to update on resize
+    window.addEventListener("resize", updateRadius);
+    return () => {
+      // Clean up event listener on unmount
+      window.removeEventListener("resize", updateRadius);
+    };
   }, [radius]);
 
   return (
